@@ -13,15 +13,23 @@
    </head>
    <body class="body">
       <h3>Is this weChat Browser: <span class="isWechat"></span></h3>
+      <h3>Is this QQ Browser: <span class="isQq"></span></h3>
    </body>
    <script type="text/javascript" src="js/jquery.min.js"></script>
    <script type="text/javascript" src="js/main.js"></script>
    <script>
       var isWechat = isWeixinBrowser();
+      var isQq = isQQBrowser();
 
       $(".isWechat").text("" + isWechat);
+      $(".isQq").text("" + isQq);
+      
       function isWeixinBrowser(){
         return /micromessenger/.test(navigator.userAgent.toLowerCase())
+      }
+
+      function isQQBrowser(){
+        return /QQBrowser/.test(navigator.userAgent.toLowerCase())
       }
    </script>
 </html>

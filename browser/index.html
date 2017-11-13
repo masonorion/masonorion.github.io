@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="hidden" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
+      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui' name='viewport' />
+      <title>weChat Detector</title>
+      <link rel="stylesheet" href="css/style.css" />
+      <!--[if lt IE 9 ]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]--> 
+   </head>
+   <body class="body">
+      <h3>Is this weChat Browser: <span class="isWechat"></span></h3>
+   </body>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/main.js"></script>
+   <script>
+      var isWechat = isWeixinBrowser();
+
+      $(".isWechat").text("" + isWechat);
+      function isWeixinBrowser(){
+        return /micromessenger/.test(navigator.userAgent.toLowerCase())
+      }
+   </script>
+</html>

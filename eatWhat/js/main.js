@@ -4,20 +4,20 @@ $(document).ready(function() {
   var restaurant = [
     "Salmon Samurai",
     "Tanjong Pagar Hawker",
-    "Maxwell",
-    "Chinatown Hawker",
-    "Tongkotsu King",
-    "Gyoza King",
-    "Tori King",
-    "Koufu",
-    "Korean BBQ",
-    "Korean Downstairs",
-    "Crab King",
-    "Jang Won",
-    "Salmon Samurai",
-    "Tanjong Pagar Hawker",
-    "Maxwell",
-    "Chinatown Hawker"
+    "PSA",
+    "100am",
+    "Tongkatsu King",
+    "Yong Tau Fu",
+    "Siew Lup(Rubbish)",
+    "Fish Soup",
+    "Coffeehive",
+    "McDonald",
+    "Prawn Noodle",
+    "Thai Food",
+    "Takeaway(Tapau)",
+    "Malay Food",
+    "Chicken Rice",
+    "Mixed Rice"
   ];
   if (outerWidth < 500) {
     createFields(16, "item", 100);

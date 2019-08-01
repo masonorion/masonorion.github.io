@@ -1,24 +1,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html class="hidden" xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="description" content="" />
-      <meta name="keywords" content="" />
-      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui' name='viewport' />
-      <title>Eat What Today</title>
-      <link rel="stylesheet" href="css/style.css" />
-      <!--[if lt IE 9 ]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]--> 
-   </head>
-   <body class="content">
-    <div class="wheel-container">
-      <div class="wheel">
-        <div class="wheel-fg"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui"
+      name="viewport"
+    />
+    <title>Eat What Today</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+  </head>
+  <body class="content">
+    <!--    <div class="wheel-container">-->
+    <!--      <div class="wheel">-->
+    <!--        <div class="wheel-fg"></div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <div class="chart-wrapper">
+      <div id="chart"></div>
+      <div class="food-list-wrapper">
+        <div id="foodList"></div>
+        <button id="add-item">Add</button>
       </div>
     </div>
-    <button class="rotate">Rotate</button>
-   </body>
-   <script type="text/javascript" src="js/jquery.min.js"></script>
-   <script type="text/javascript" src="js/main.js"></script>
+    <div id="question"><h1>&nbsp;</h1></div>
+
+<!--    <button class="rotate">Rotate</button>-->
+  </body>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </html>

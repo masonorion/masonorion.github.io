@@ -15,7 +15,14 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  font-family: Arial, "Microsoft YaHei";
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .wheel-container:before {
@@ -90,6 +97,118 @@ body {
 
 .rotate.disabled {
   background-color: #a2a2a2;
+}
+
+.chart-wrapper {
+  display: flex;
+  align-content: center;
+  justify-items: center;
+}
+
+#chart {
+  width: 500px;
+  margin-left: auto;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+#chart.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+#chart .slice {
+  transition: all 200ms ease-in-out;
+}
+
+.food-list-wrapper {
+  width: 250px;
+  margin-right: auto;
+  position: relative;
+}
+
+.food-list-wrapper.more-top:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: linear-gradient(to bottom, #fff, transparent);
+}
+
+.food-list-wrapper.more-bottom:after {
+  content: "";
+  position: absolute;
+  bottom: 44px;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: linear-gradient(to bottom, transparent, #fff);
+}
+
+#foodList {
+  overflow: auto;
+  height: 500px;
+  position: relative;
+  margin-bottom: 4px;
+  -ms-overflow-style: none; // IE 10+
+  scrollbar-width: none; // Firefox
+}
+
+#foodList::-webkit-scrollbar {
+  display: none;
+}
+
+#foodList .list-item {
+  margin-bottom: 4px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  /*justify-content: center;*/
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#foodList .list-item .delete {
+  position: absolute;
+  right: 10px;
+  border-radius: 4px;
+  background-color: #ff7863;
+  /*font-size: 0;*/
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#question {
+  text-align: center;
+}
+
+#add-item {
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  border: 0;
+  outline: none;
 }
 
 @media (max-width: 400px) {

@@ -127,6 +127,10 @@ function initD3() {
 
   $(document).on("click", ".list-item .delete", function(e) {
     e.preventDefault();
+    if (data.length < 3) {
+      alert("You must have 2 selection bro");
+      return;
+    }
     var currIndex = $(this).data("index");
     console.log(currIndex);
     $("#foodList").empty();
